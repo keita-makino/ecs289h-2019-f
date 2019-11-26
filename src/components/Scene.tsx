@@ -1,7 +1,8 @@
 import * as BABYLON from 'babylonjs';
 import * as GUI from 'babylonjs-gui';
 import React, { useEffect, useRef } from 'react';
-import data from '../data/lesmis-3d.json';
+import texture from '../data/texture.jpg';
+import speechToText from '../utils/speechToText';
 
 type Props = {};
 
@@ -33,6 +34,10 @@ const onSceneLoaded = (
   sphere.position = new BABYLON.Vector3(0, 0, 0);
   sphere.rotation.x = Math.PI;
 
+  const groundMaterial = new BABYLON.StandardMaterial('mat', scene);
+  groundMaterial.diffuseTexture = new BABYLON.Texture(texture, scene);
+  sphere.material = groundMaterial;
+
   engine.runRenderLoop(() => {
     if (scene) {
       scene.render();
@@ -44,6 +49,8 @@ const Scene: React.FC<Props> = () => {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    const result = speechToText();
+
     const canvas = ref.current as HTMLCanvasElement;
     const engine = new BABYLON.Engine(canvas, true);
     const scene = new BABYLON.Scene(engine);
