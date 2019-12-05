@@ -24,7 +24,7 @@ import * as sdk from 'microsoft-cognitiveservices-speech-sdk';
 
 const speechToText = () => {
   const subscriptionKey = '5a93f133cac5429daab77776e5e2af42';
-  const serviceRegion = 'westus'; // e.g., "westus"
+  const serviceRegion = 'westus';
 
   const audioConfig = sdk.AudioConfig.fromDefaultMicrophoneInput();
   const speechConfig = sdk.SpeechConfig.fromSubscription(
@@ -32,10 +32,8 @@ const speechToText = () => {
     serviceRegion
   );
 
-  // setting the recognition language to English.
   speechConfig.speechRecognitionLanguage = 'en-US';
 
-  // create the speech recognizer.
   const recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
   return recognizer;
 };
