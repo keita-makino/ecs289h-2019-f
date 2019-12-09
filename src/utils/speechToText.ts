@@ -23,7 +23,7 @@
 import * as sdk from 'microsoft-cognitiveservices-speech-sdk';
 
 const speechToText = () => {
-  const subscriptionKey = '5a93f133cac5429daab77776e5e2af42';
+  const subscriptionKey = '4dcd305c84f6481c9742e030334af7cc';
   const serviceRegion = 'westus';
 
   const audioConfig = sdk.AudioConfig.fromDefaultMicrophoneInput();
