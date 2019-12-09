@@ -138,6 +138,7 @@ const Main: React.FC<Props> = (props: Props) => {
         console.log(mesh);
         break;
       default:
+        setInfo({} as Flight);
         break;
     }
   };

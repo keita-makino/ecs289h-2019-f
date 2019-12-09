@@ -1,7 +1,8 @@
 {
-  "name": "ecs289h-2019-F",
+  "name": "ecs289h-2019-f",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://keita-makino.github.io/ecs289h-2019-f",
   "dependencies": {
     "@babylonjs/materials": "^4.0.3",
     "@types/jest": "24.0.23",
@@ -19,7 +20,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,6 +52,7 @@
     "babylonjs-gui": "^4.0.3",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "gh-pages": "^2.1.1",
     "graphql": "^14.5.8",
     "husky": "^3.1.0",
     "license-checker": "^25.0.1",
