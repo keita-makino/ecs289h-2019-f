@@ -80,7 +80,6 @@ const Main: React.FC<Props> = (props: Props) => {
   const recognizer = speechToText();
   const { data } = useQuery(query, { client: props.apolloClient });
   const [info, setInfo] = useState({} as Flight);
-  const [isVR, setIsVr] = useState(false);
 
   const onScenePointerUp = async (
     event: PointerInfo,
@@ -92,19 +91,15 @@ const Main: React.FC<Props> = (props: Props) => {
     if (mesh === null) return;
     switch (mesh.name) {
       case 'airport':
-        destination = mesh.position.scale(1.3);
+        destination = mesh.position.scale(1.6);
         fetchData({ airport: mesh.id.split(' ')[1] }, props.apolloClient);
         break;
       case 'flight':
-        destination = mesh.position.scale(1.1);
+        destination = mesh.position.scale(1.4);
         fetchData({ aircraft: mesh.id.split(' ')[1] }, props.apolloClient);
         break;
       case 'path':
         fetchData({ airline: mesh.id.split(' ')[1] }, props.apolloClient);
-        break;
-      case 'sky':
-        console.log(isVR);
-        if (!isVR) recognizeInput(recognizer, props.apolloClient);
         break;
       default:
         return;
@@ -150,7 +145,6 @@ const Main: React.FC<Props> = (props: Props) => {
     vrHelper.currentVRCamera!.position = new Vector3(-100, 30, -100);
     await vrHelper.onControllerMeshLoaded.add(contoller => {
       vrHelper.displayLaserPointer = true;
-      setIsVr(true);
       contoller.onPadValuesChangedObservable.add(state => {
         if (contoller.hand === 'right') {
           const rotation = (vrHelper.currentVRCamera as WebVRFreeCamera)
@@ -163,7 +157,7 @@ const Main: React.FC<Props> = (props: Props) => {
         }
       });
       contoller.onTriggerStateChangedObservable.add(async state => {
-        if (contoller.hand === 'right' && state.value === 1) {
+        if (contoller.hand === 'left' && state.value === 1) {
           await recognizeInput(recognizer, props.apolloClient);
         }
       });

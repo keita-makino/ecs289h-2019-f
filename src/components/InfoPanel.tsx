@@ -81,7 +81,7 @@ const InfoPanel: React.FC<Info> = (props: Info) => {
                     .replace(/,/g, '')}
                   fontFamily="Segoe UI"
                   fontSize={48}
-                  color="#222222"
+                  color="#000000"
                   outlineWidth={4}
                   outlineColor={'white'}
                   alpha={0.5}
