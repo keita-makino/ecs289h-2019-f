@@ -14,3 +14,4 @@ You may try the VR visualization (if I don't quit from the API subscription) wit
 - [react-babylonjs documentation](https://github.com/brianzinn/react-babylonjs) The license statement is in the license folder.
 - [Azure Cognitie Services documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/)
 - [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+- [Apollo documentation](https://www.apollographql.com/docs/)
