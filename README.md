@@ -13,4 +13,4 @@ You may try the VR visualization (if I don't quit from the API subscription) wit
 - [Babylon.js で Oculus Quest で気軽に入れる VRクラブを作る (1)](https://qiita.com/nikaera/items/e3697cbc2cf76b0f4899)
 - [react-babylonjs documentation](https://github.com/brianzinn/react-babylonjs) The license statement is in the license folder.
 - [Azure Cognitie Services documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/)
-- [Azure Cognitie Services documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+- [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
