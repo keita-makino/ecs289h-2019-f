@@ -4,7 +4,7 @@ As the final project of [ECS289H 2019 Fall: Immersive Visualization](https://web
 
 # Try it
 
-You may try the VR visualization (if I don't quit from the API subscription) with Oculus Quest from [here](https://keita-makino.github.io/ecs2019-f).
+You may try the VR visualization (if I don't quit from the API subscription) with Oculus Quest from [here](https://keita-makino.github.io/ecs289h-2019-f).
 
 # References
 
